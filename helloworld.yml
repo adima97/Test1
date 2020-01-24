@@ -1,5 +1,6 @@
 ---
 - hosts: adi_grp
+
   tasks:
   - name: Show hostname
     command: hostname
