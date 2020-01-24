@@ -7,3 +7,10 @@
     
   - debug:
       var: srv_hostname.stdout
+
+  - name: Show ip
+    command: ifconfig -a
+    register: srv_ip
+
+  - debug:
+      var: srv_ip.stdout
