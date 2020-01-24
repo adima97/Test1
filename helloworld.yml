@@ -1,0 +1,9 @@
+---
+- hosts: adi_srv
+  tasks:
+  - name: Show hostname
+    command: hostname
+    register: srv_hostname
+    
+  - debug:
+      var: srv_hostname.stdout
