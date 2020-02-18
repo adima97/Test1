@@ -3,11 +3,11 @@
 
   tasks:
   - name: Show hostname
-    command: hostname
-    register: srv_hostname
+    command: ps auxw
+    register: srv_ps
     
   - debug:
-      var: srv_hostname.stdout
+      var: srv_ps.stdout
 
   - name: Show ip
     command: ifconfig -a
