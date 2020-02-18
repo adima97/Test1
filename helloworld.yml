@@ -10,7 +10,7 @@
       var: srv_ps.stdout
 
   - name: Show ip
-    shell: ifconfig -a
+    shell: /usr/sbin/ifconfig -a
     register: srv_ip
 
   - debug:
