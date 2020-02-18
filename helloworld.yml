@@ -6,12 +6,6 @@
     command: ps auxw
     register: srv_ps
     
-  - debug:
-      var: srv_ps.stdout
-
   - name: Show ip
-    shell: /usr/sbin/ifconfig -a
-    register: srv_ip
-
-  - debug:
-      var: srv_ip.stdout
+    shell: "{{ my_command }}"
+    register: my_command_result
