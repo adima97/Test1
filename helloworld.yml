@@ -2,10 +2,10 @@
 - hosts: adi_grp
 
   tasks:
-  - name: Show hostname
-    command: ps auxw
+  - name: Show
+    command: echo {{ pwd }}
     register: srv_ps
     
-  - name: Show ip
+  - name: My command
     shell: "{{ my_command }}"
     register: my_command_result
